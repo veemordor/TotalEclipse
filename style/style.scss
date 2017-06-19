@@ -1,0 +1,329 @@
+@import "partials/setup";
+
+$pink: rgb(201, 62, 149);
+$purple: rgb(60, 57, 168);
+
+
+html{
+	font-size: 62.5%;
+}
+body {
+	background-color: black;
+	font-family: monospace;
+	font-size: 1.8rem;
+	color: white;
+}
+.wrapper{
+	max-width: 700px;
+	width: 90%;
+	margin: 0px auto;
+	border-radius: 5px;
+	padding: 2rem;
+}
+
+img{
+	max-width: 100%;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+//anchor tags
+a{
+	display: inline-block;
+	border:2px solid blue;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: 2px solid blue;
+	color: white;
+	background-color: black;
+}
+
+.turnAround {
+	margin: 10% 0 0 0;
+	transition: 0.3s all ease;
+}
+.inactiveLink {
+   pointer-events: none;
+   cursor: default;
+   border: 2px solid #333;
+   color: #333;
+   background-color: #4c4c4c;
+}
+
+
+// STATUS BAR: Sound Control; Title; Health
+
+nav{
+	position: fixed;
+	border-bottom: 10px double blue;
+}
+
+.statusBar {
+	width: 100%;
+	background-color: #000;
+}
+
+h1 {
+	margin: 0;
+	text-align: center;
+	font-size: 2.4rem;
+}
+
+.title {
+	opacity: 0;
+}
+
+.fa-heart-o {
+	color: $pink;
+}
+.fa-heart.levelOne, .fa-heart.levelTwo, .fa-heart.levelThree {
+	color: $pink;
+}
+
+//HEADER
+
+.headerImage{
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+//SECTIONS
+
+section{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: cyan;
+	justify-content: center;
+	background: black;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+
+blockquote {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+//GAMEPLAY
+
+form {
+	display:flex;
+	justify-content: space-between;
+}
+input[type="radio"] {
+	display: none;
+}
+
+label{
+	cursor: pointer;
+	padding: 15px 20px;
+	margin-right: 2%;
+	border: 2px solid blue;
+	font-weight: bolder;
+	text-align: center;
+	width: 50%;
+}
+label:nth-of-type(2) {
+	margin-right: 0;
+}
+
+label p {
+	margin: auto;
+}
+
+.correctAnswer{
+	background-color: blue;
+	color: white;
+}
+
+.wrongAnswer{
+	background-color: $pink;
+	color: white;
+	padding: 2% 4%;
+	margin-right: 2%;
+	display: flex;
+	align-items: center;
+}
+
+.gameOver{
+	display: none;
+	text-align: center;
+	a {
+		letter-spacing: 2px;
+		margin-top: 40px;
+	}
+}
+
+.displayGameOver{
+	display: flex;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+
+.gameWin{
+	display: none;
+}
+
+.displayGameWin{
+	display: flex;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+
+.gameWinContent {
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 1.6em;
+	.gameWinContentOptions{
+		display: flex;
+		flex-direction:row;
+		justify-content:space-around;
+	}
+}
+
+//GRAPHICS and MEDIA
+
+.bonnieAvatar {
+	position: fixed;
+	bottom:0;
+}
+.bonnieAvatarRight {
+	display: none;
+	position: fixed;
+	max-width: 145px;
+}
+
+.bonnieTylerEyes {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.moon {
+	background: url(../assets/moonTransparent.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	h2 {
+		text-shadow: 2px 2px 5px black;
+	}
+}
+
+.media {
+	text-align: center;
+	video {
+		max-width: 100%;
+		box-shadow: -10px -10px 50px blue, 10px 10px 50px blue;
+	}
+}
+
+.mobileVideo {
+	display: none;
+	margin: 0 auto;
+}
+
+//FOOTER
+
+footer {
+	text-align: center;
+	.wrapper{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+ul.credits{
+	display: flex;
+	flex-direction:column;
+	justify-content: space-between;
+	padding: 2px;
+	font-size: 1.4rem;
+	li{
+		margin-top: 2px;
+	}
+}
+
+.credits li h2{
+	font-size:1.6rem;
+	color:$pink;
+	margin-bottom: 0;
+}
+.credits li h3{
+	font-size:1.4rem;
+	color:$pink;
+	margin-bottom: 0;
+}
+
+// MEDIA QUERIES
+
+@media (max-width: 1030px) {
+	.bonnieAvatar {
+	max-width: 145px;
+	}
+}
+
+@media (max-width: 940px) {
+	.bonnieAvatar {
+	display: none;
+	}
+	.bonnieAvatarRight {
+		display: block;
+		position: fixed;
+		bottom:0;
+		right: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.bonnieAvatarRight {
+	display: none;
+	}
+	h1 {
+		display: none;
+	}
+	form {
+		flex-direction: column;
+		label {
+			width: 100%;
+			margin: 2% 0;
+			padding: 5%;
+		}
+	}
+	blockquote {
+		text-align: left;
+	}
+	.wrongAnswer{
+		padding: 5%;
+	}
+	.mobileVideo {
+		display: block;
+	}
+	.browserVideo {
+		display: none;
+	}
+}
+@media (max-width: 490px) {
+	.wrongAnswer{
+		padding: 7%;
+	}
+}

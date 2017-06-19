@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Total Eclipse of the Heart</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link type="image/png" href="./assets/totalEclipseFavicon.png" rel="icon">
+	<link rel="stylesheet" href="./style/style.css">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-13241140-8', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+<body>
+<audio id="totalEclipseSound" src="./assets/introMidi.mp3" autoplay="true" loop="true"></audio> 
+<audio id="turnAroundSound" src="./assets/turnAroundMidi.mp3"></audio>
+<audio src="./assets/totalEclipseWinSound.mp3" id="youWinSound"></audio>
+	<section class="gameOver">
+		<div class="wrapper">
+			<article class="lose">
+				<h2>Sorry!</h2>
+				<h2>You've suffered from a Total Eclipse Of The Heart!</h2>
+				<h3><a href="index.html">START OVER</a></h3>
+			</article>
+		</div>
+	</section>
+
+	<nav class="statusBar">
+		<div>
+			<ul class="status wrapper">
+				<li class="musicPlayer">
+					<i class="fa fa-volume-up fa-lg" aria-hidden="true"></i>
+				</li>
+				<li class="title">
+					<h1>Total Eclipse of the Heart</h1></li>
+				<li class="healthBar">
+					<i class="fa fa-heart fa-lg levelOne" aria-hidden="true"></i>
+					<i class="fa fa-heart fa-lg levelTwo" aria-hidden="true"></i>
+					<i class="fa fa-heart fa-lg levelThree" aria-hidden="true"></i>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="bonnieAvatar">
+		<img src="./assets/BonnieAvatar.png" alt="Bonnie Tyler">
+	</div>
+	<div class="bonnieAvatarRight">
+		<img src="./assets/BonnieAvatarRight.png" alt="Bonnie Tyler">
+	</div>
+<!-- HEADER SECTION -->
+	<header>
+	<section class="intro">
+		<div class="headerImage">
+			<img src="./assets/totalEclipseTitle.png" alt="Total Eclipse">
+		</div>
+		<aside class="instructions">
+			<div class="wrapper">
+				<h3>How to Play</h3>
+				<p>Hey Bright Eyes, I really need you tonight. Complete the lyrics below, but be careful, if you answer wrong three times, you'll suffer from a total eclipse of the heart! Are you ready to turn around?</p>
+				<a href="#slideOne" class="turnAround left">Turn Around</a>
+			</div>
+		</aside>
+		
+	</section>
+	</header>
+
+<!-- MAIN SECTION -->
+	<main>
+		<section id="slideOne">
+			<div class="wrapper">
+				<article class="question">
+					<blockquote>
+						<h2>Every now and then I get a little bit...</h2>
+					</blockquote>
+				</article>
+
+				<form action="" class="firstQuestion">
+					<label for="questionOneA">Lonely and you're never coming round</label>
+					<input type="radio" id="questionOneA" name="questionOne" value="Lonely and you're never coming round">
+
+					<label for="questionOneB">Hungry and you're always chowing down</label>
+					<input type="radio" id="questionOneB" name="questionOne" value="Hungry and you're always chowing down">
+				</form>
+				<a href="#slideTwo" class="turnAround inactiveLink">Turn Around</a>
+			</div>
+		</section>
+
+		<section id="slideTwo">
+			<div class="wrapper">
+				<article class="question">
+					<blockquote>
+						<h2>Every now and then I get a little bit...</h2>
+					</blockquote>
+				</article>
+
+				<form action="">
+					<label for="questionTwoA">Mired in everlasting nightmares and fears</label>
+					<input type="radio" id="questionTwoA" name="questionTwo" value="Mired in everlasting nightmares and fears">
+
+					<label for="questionTwoB">Tired of listening to the sound of my tears</label>
+					<input type="radio" id="questionTwoB" name="questionTwo" value="Tired of listening to the sound of my tears">
+				</form>
+				<a href="#slideThree" class="turnAround inactiveLink">Turn Around</a>
+			</div>
+		</section>
+		<section id="slideThree">
+			<div class="wrapper">
+				<article class="question">
+					<blockquote>
+						<h2>Every now and then I get a little bit...</h2>
+					</blockquote>
+				</article>
+
+				<form action="">
+					<label for="questionThreeA">Impervious to the rest of your terrible lies</label>
+					<input type="radio" id="questionThreeA" name="questionThree" value="Impervious to the rest of your terrible lies">
+
+					<label for="questionThreeB">Nervous that the best of all the years have gone by</label>
+					<input type="radio" id="questionThreeB" name="questionThree" value="Nervous that the best of all the years have gone by">
+				</form>
+				<a href="#slideFour" class="turnAround inactiveLink">Turn Around</a>
+			</div>
+		</section>
+
+		<section id="slideFour">
+			<div class="wrapper">
+				<article class="question">
+					<blockquote>
+						<h2>Every now and then I get a little bit...</h2>
+					</blockquote>
+				</article>
+
+				<form action="">
+					<label for="questionFourA">Terrified and then I see the look in your eyes</label>
+					<input type="radio" id="questionFourA" name="questionFour" value="Terrified and then I see the look in your eyes">
+
+					<label for="questionFourB">Frightened when I see the look in your eyes</label>
+					<input type="radio" id="questionFourB" name="questionFour" value="Frightened when I see the look in your eyes">
+				</form>
+				<a href="#slideFive" class="turnAround inactiveLink">Turn Around</a>
+			</div>
+		</section>
+		<!--add BRIGHT EYES section-->
+		<section id="slideFive">
+			<div class="wrapper">
+				<article class="question">
+					<blockquote>
+						<h2>Every now and then I...</h2>
+					</blockquote>
+				</article>
+
+				<form action="">
+					<label for="questionFiveA">Get a little bit</label>
+					<input type="radio" id="questionFiveA" name="questionFive" value="Get a little bit">
+					<label for="questionFiveB">Fall apart</label>
+					<input type="radio" id="questionFiveB" name="questionFive" value="Fall apart">
+				</form>
+				<a href="#slideSix" class="turnAround inactiveLink">Turn Around</a>
+			</div>
+		</section>
+
+		<!--BRIGHT EYES FLYBY section-->
+		<section class="brightEyes">
+			<div class="bonnieTylerEyes">
+				<img src="./assets/BonnieTyler.gif" alt="Bonnie Tyler Bright Eyes">
+			</div>
+		</section>
+
+		<!--INTERMISSION feat. MOON-->
+		<section class="moon" id="slideSix">
+			<div class="wrapper">
+				<article class="intermission">
+					<blockquote>
+						<h2>Every now and then I fall apart!</h2>
+					</blockquote>
+					<a href="#slideSeven" class="turnAround">Turn Around</a>
+				</article>
+			</div>
+		</section>
+
+		<section id="slideSeven">
+			<div class="wrapper">
+				<article class="question wrapper">
+					<blockquote>
+						<h2>Every now and then I get a little bit...</h2>
+					</blockquote>
+				</article>
+
+				<form action=""><!--this is question SIX -->
+					<label for="questionSixA">Feckless and you think that I'm a child</label>
+					<input type="radio" id="questionSixA" name="questionSix" value="Feckless and you think that I'm a child">
+
+					<label for="questionSixB">Restless and I dream of something wild</label>
+					<input type="radio" id="questionSixB" name="questionSix" value="Restless and I dream of something wild">
+				</form>
+				<a href="#slideEight" class="turnAround inactiveLink">Turn Around</a>
+			</div>
+		</section>
+
+		<section id="slideEight">
+			<div class="wrapper">
+				<article class="question wrapper">
+					<blockquote>
+						<h2>Every now and then I get a little bit...</h2>
+					</blockquote>
+				</article>
+
+				<form action=""><!--this is question SEVEN -->
+					<label for="questionSevenA">Helpess and I'm lying like a child in your arms</label>
+					<input type="radio" id="questionSevenA" name="questionSeven" value="Helpess and I'm lying like a child in your arms">
+
+					<label for="questionSevenB">Hopeless and I'm dying of your charms</label>
+					<input type="radio" id="questionSevenB" name="questionSeven" value="Hopeless and I'm dying of your charms">
+				</form>
+				<a href="#slideNine" class="turnAround inactiveLink">Turn Around</a>
+			</div>
+		</section>
+
+		<section id="slideNine">
+			<div class="wrapper">
+				<article class="question">
+					<blockquote>
+						<h2>Every now and then I get a little bit...</h2>
+					</blockquote>
+				</article>
+
+				<form action=""><!--this is question EIGHT -->
+					<label for="questionEightA">Outraged and I know you have to storm out and lie</label>
+					<input type="radio" id="questionEightA" name="questionEight" value="Outraged and I know you have to storm out and lie">
+
+					<label for="questionEightB">Angry and I know you have to get out and cry</label>
+					<input type="radio" id="questionEightB" name="questionEight" value="Angry and I know you have to get out and cry">
+				</form>
+				<a href="#slideTen" class="turnAround inactiveLink">Turn Around</a>
+			</div>
+		</section>
+
+		<section id="slideTen">
+			<div class="wrapper">
+				<article class="question">
+					<blockquote>
+						<h2>Every now and then I get a little bit...</h2>
+					</blockquote>
+				</article>
+
+				<form action=""><!--this is question NINE -->
+					<label for="questionNineA">Terrified and then I see the look in your eyes</label>
+					<input type="radio" id="questionNineA" name="questionNine" value="Terrified and then I see the look in your eyes">
+
+					<label for="questionNineB">Frozen and then I fall down and cry</label>
+					<input type="radio" id="questionNineB" name="questionNine" value="Frozen and then I fall down and cry">
+				</form>
+				<a href="#slideEleven" class="turnAround inactiveLink">Turn Around</a>
+			</div>
+		</section>
+
+		<!--BRIGHT EYES FLYBY section-->
+		<section class="brightEyes">
+			<div class="bonnieTylerEyes">
+				<img src="./assets/BonnieTyler.gif" alt="Bonnie Tyler Bright Eyes">
+			</div>
+		</section>
+		<section id="slideEleven">
+			<div class="wrapper">
+				<article class="question">
+					<blockquote>
+						<h2>Every now and then I fall apart!</h2>
+						<h2>And I need you...</h2>
+					</blockquote>
+				</article>
+
+				<form action=""><!--this is question TEN -->
+					<label for="questionTenA">More than ever!</label>
+					<input type="radio" id="questionTenA" name="questionTen" value="More than ever!">
+
+					<label for="questionTenB">Now tonight!</label>
+					<input type="radio" id="questionTenB" name="questionTen" value="Now tonight">
+				</form>
+				<a href="#slideTwelve" class="turnAround inactiveLink lastTurnAround">Turn Around</a>
+			</div>
+		</section>
+		<!--add AND I NEED YOU MORE THAN EVER section-->
+		<section class="gameWin" id="slideTwelve">
+			<div class="wrapper">
+				<article class="gameWinContent">
+					<h2>Bright Eyes! You Win!</h2>
+				</article>
+
+				<div class="media">
+					<video class="mobileVideo" loop autoplay controls src="./assets/totalEclipseWinVideo.mp4"></video>
+					<video class="browserVideo" loop autoplay src="./assets/totalEclipseWinVideo.mp4"></video>
+				</div>
+				
+				<article class="gameWinContent">
+					<ul class="gameWinContentOptions">
+						<!--content is pushed in when game is won-->
+					</ul>
+					<footer id="endCredits">
+						<div class="wrapper">
+							<ul class="credits">
+								<li>
+									<h2>A Bonnie Tyler Experience</h2>
+								</li>
+								<li>
+									<h3>By Shannon Draper &amp; Vincent Chevalier</h3>
+								</li>
+								<li>
+									<p>Clips and music from Total Eclipse of the Heart by Bonnie Tyler and are property of Columbia Music.</p>
+									</li>
+								<li>
+									<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="I just played Total Eclipse of the Heart: A Bonnie Tyler Experience by @ShannonDraper and @hyperflesh" data-url="http://totaleclipseofthehe.art/" data-related="ShannonDraper,hyperflesh" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+								</li>
+							</ul>
+						</div>
+					</footer>
+				</article>
+			</div>
+		</section>
+		<footer id="endCredits">
+			<div class="wrapper">
+				<ul class="credits">
+					<li>
+						<h2>A Bonnie Tyler Experience</h2>
+					</li>
+					<li>
+						<h3>By Shannon Draper &amp; Vincent Chevalier</h3>
+					</li>
+					<li>
+						<p>Clips and music from Total Eclipse of the Heart by Bonnie Tyler and are property of Columbia Music.</p>
+						</li>
+					<li>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="I just played Total Eclipse of the Heart: A Bonnie Tyler Experience by @ShannonDraper and @hyperflesh" data-url="http://totaleclipseofthehe.art/" data-related="ShannonDraper,hyperflesh" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</main>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
