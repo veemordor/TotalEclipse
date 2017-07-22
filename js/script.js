@@ -18,7 +18,6 @@ var playPiano = true;
 
 $(function() {  
 
-
 	//smooth scroll
 	$('a[href*="#"]:not([href="#"])').click(function() {
 	  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -33,7 +32,6 @@ $(function() {
 	  }
 	});
 
-	//
 	$(window).scroll(function(){
 	    $(".title").css("opacity", 0 + $(window).scrollTop() / 300);
 	});
@@ -68,12 +66,10 @@ $(function() {
 	// when user clicks on an answer.
 	$("input[value]").on("click", function(){
 		var questionNumber = sliderCounter - 1;
-		// console.log(questionNumber + "IM THE QUESTION NUMBER");
 
 		//creates a variable that stores the answer of what the user clicks
 		var usersAnswer = $(this).val(); 
-		// console.log($(this).val());
-		// console.log(usersAnswer);
+
 
 		var clickedLabel = $(this).attr("id");
 
@@ -103,7 +99,6 @@ $(function() {
 
 			//if user gets three wrong answers, the Game Over slide appears (a class is added to turn it from from display:none to display:flex)
 			$(".gameOver").addClass("displayGameOver");
-				// console.log("no more health")
 				return health = 0;
 
 			}
